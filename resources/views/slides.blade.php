@@ -34,8 +34,9 @@
                             <div class="form-group col-md-2">
                                 <label for="resolution">Разрешение</label>
                                 <select class="custom-select" id="resolution" required>
-                                    <option>1920x1024</option>
-                                    <option>768x1024</option>
+                                    @foreach($resolutions as $resolution)
+                                        <option value="{{ $resolution->id }}">{{ $resolution->size }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                             <div class="form-group col-md-2">
