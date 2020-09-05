@@ -19,4 +19,4 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::get('/', 'HomeController@index')->name('home');
+Route::get('/', 'SlideController@index')->name('home');

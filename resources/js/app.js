@@ -13,3 +13,6 @@ require('./bootstrap');
  */
 
 require('./components/Example');
+
+const feather = require('feather-icons');
+feather.replace();
