@@ -19,4 +19,5 @@ Auth::routes([
     'verify' => false,
 ]);
 
-Route::get('/', 'SliderController@index')->name('slides');
+Route::resource('slides', 'SliderController');
+//Route::get('/', 'SliderController@index')->name('slides');

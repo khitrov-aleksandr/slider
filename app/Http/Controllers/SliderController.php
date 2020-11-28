@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreSlide;
 use App\Resolution;
 use Illuminate\Http\Request;
 
@@ -30,7 +31,8 @@ class SliderController extends Controller
         ]);
     }
 
-    public function store(Request $request) {
-
+    public function store(StoreSlide $request)
+    {
+        return redirect()->back()->withSuccess('Слайд добавлен');
     }
 }

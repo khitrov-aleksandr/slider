@@ -16,13 +16,14 @@ class CreateSlidesTable extends Migration
         Schema::create('slides', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('file_name');
-            $table->unsignedBigInteger('resolution_id');
-            $table->integer('show_time');
             $table->dateTime('date_from');
             $table->dateTime('date_to');
-            $table->boolean('is_active')->default(true);
+            $table->string('file');
+            $table->unsignedBigInteger('resolution_id');
+            $table->integer('show_time');
+            $table->integer('order');
             $table->boolean('is_default')->default(false);
+            $table->boolean('is_active')->default(true);
             $table->timestamps();
 
             $table->foreign('resolution_id')->references('id')->on('resolutions');
