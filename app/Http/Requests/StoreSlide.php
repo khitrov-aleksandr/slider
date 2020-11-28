@@ -27,9 +27,10 @@ class StoreSlide extends FormRequest
             'name' => 'required',
             'date_from' => 'required',
             'date_to' => 'required',
+            'file' => 'required',
             'resolution_id' => 'required',
             'show_time' => 'required',
-            'file' => 'required',
+            'order' => 'required'
         ];
     }
 }
